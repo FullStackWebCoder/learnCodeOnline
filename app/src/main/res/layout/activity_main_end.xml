@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/name_text_layout"
+        style="@style/CustomTextLayout"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Name"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/InputText"
+            android:inputType="textPersonName"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/email_text_layout"
+        style="@style/CustomTextLayout"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_text_layout">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/InputText"
+            android:inputType="textEmailAddress"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/number_text_layout"
+        style="@style/CustomTextLayout"
+        android:layout_marginTop="24dp"
+        android:hint="Mobile Number"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/email_text_layout"
+        app:layout_constraintStart_toStartOf="@id/email_text_layout"
+        app:layout_constraintTop_toBottomOf="@id/email_text_layout">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="10"
+            style="@style/InputText"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_text_layout"
+        style="@style/CustomTextLayout"
+        android:layout_marginTop="24dp"
+        android:hint="Password"
+        app:layout_constraintEnd_toEndOf="@id/email_text_layout"
+        app:layout_constraintStart_toStartOf="@id/email_text_layout"
+        app:layout_constraintTop_toBottomOf="@id/number_text_layout">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/InputText"
+            android:inputType="textPassword"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/signup_button"
+        android:text="SignUp"
+        style="@style/CustomButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/login_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_text_layout"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/login_button"
+        android:text="Login"
+        style="@style/CustomButton"
+        app:layout_constraintTop_toTopOf="@+id/signup_button"
+        app:layout_constraintBottom_toBottomOf="@id/signup_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/signup_button" />
+
+
+</android.support.constraint.ConstraintLayout>
